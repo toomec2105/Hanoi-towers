@@ -21,7 +21,7 @@ public class HanoiTowers {
 	
 	private static void moveDisks(ArrayList<Integer> first, ArrayList<Integer> second, ArrayList<Integer> third) {
 		
-		System.out.println("Moving disks");
+		//System.out.println("Moving disks");
 		int movedElement = 0;
 		
 		    while(first.size() > 0 || second.size() > 0) {
@@ -67,6 +67,7 @@ public class HanoiTowers {
 			    			first.add(movedElement);
 			    			third.remove(third.size()- 1);
 			    			movedElement = second.get(second.size()- 1);
+			    			printTowers(first, second, third);
 			    			third.add(movedElement);
 			    			second.remove(second.size()- 1);
 			    		}
